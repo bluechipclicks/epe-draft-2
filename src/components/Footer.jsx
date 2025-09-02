@@ -8,7 +8,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#171717] px-6 lg:px-8 py-9 md:py-20 relative h-[75vh]">
+    <footer className="bg-[#171717] px-6 lg:px-8 py-9 md:py-20 relative h-[90vh]">
       {/* Top Section */}
 
       <div className="">
@@ -17,22 +17,22 @@ const Footer = () => {
             {/* Column 1: Brand and Description */}
             <div className="">
               <Image
-                src="/assets/footer.png"
+                src="/assets/footer-bg.webp"
                 alt="epe"
                 height={500}
                 width={900}
-                className="absolute left-0 "
+                className="absolute left-0 top-3 opacity-40"
               />
             </div>
             <div className="z-20">
               <div>
-                              <h2 className="text-5xl text-white mb-6">Let’s Talk Affiliate Marketing</h2>
-                              <Link href={"#"} className="bg-gray-300/50 rounded-full font-bold text-white px-4 py-2 flex items-center gap-2 w-fit">Contact Us <GoArrowUpRight />
+                              <h2 className="text-5xl md:text-7xl text-white mb-6 leading-20">Let’s Talk Boiler Solutions</h2>
+                              <Link href={"#"} className="bg-gray-300/50 hover:bg-red-600 rounded-full font-bold text-white px-8 py-2 flex items-center gap-2 w-fit">Contact Us <GoArrowUpRight />
 </Link>
 
               </div>
               
-              <div className="grid grid-cols-2 z-20 mt-9">
+              <div className="grid grid-cols-2 z-20 my-9">
                 {/* Column 2: Product Links */}
                 <div className="mt-4">
                   <div className="relative w-full max-w-2xl mx-auto mb-16">
@@ -87,43 +87,36 @@ const Footer = () => {
 
                     {/* Text on top of the shape */}
                     <div className=" text-2xl absolute inset-0  text-white font-bold ">
-                      Our Products
+                      Get in Touch
                     </div>
                   </div>
 
                   <ul className="space-y-3">
                     <li>
                       <Link
-                        href="/product/ibr-boiler"
+                        href="#"
                         className="text-lg text-white transition-colors"
                       >
-                        IBR Boiler
+                      info@energy-boilers.com
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href="/product/small-industrial-boiler-sib"
+                        href="#"
                         className="text-lg text-white transition-colors"
                       >
-                        Small Industrial Boiler [SIB]
+                      +91 (265) 2830375
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href="/thermic-fluid-heaters-thermopack"
+                        href="#"
                         className="text-lg text-white transition-colors"
                       >
-                        Thermic Fluid Heaters [Thermopack]
+                        Plot No. 29, G.I.D.C. Industrial Estate, N.H. No.8, POR-Ramangamdi, Vadodara - 391243, Gujarat (India)
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        href="/hot-air-generators"
-                        className="text-lg text-white transition-colors"
-                      >
-                        Hot Air Generators
-                      </Link>
-                    </li>
+                  
                   </ul>
                 </div>
                 {/* Column 3: Services Links */}
