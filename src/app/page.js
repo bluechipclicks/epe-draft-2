@@ -1,9 +1,12 @@
 import Client from "@/components/Client";
 import HeroSection from "@/components/HeroSection";
 import OurStory from "@/components/OurStory";
-import ServiceAwards from "@/components/ServiceAwards";
+import ServiceAwards from "@/components/LeadingBoilerManufacturing";
 import ServiceList from "@/components/ServiceList";
 import React from "react";
+import ProductCategories from "@/components/ProductCategories";
+import Footer from "@/components/Footer";
+import IndustryWeServe from "@/components/IndustryWeServe";
 
 const page = () => {
   return (
@@ -11,8 +14,10 @@ const page = () => {
       <HeroSection />
       <OurStory />
       <ServiceAwards />
+      <ProductCategories />
+      <Client />
+      <IndustryWeServe/>
       <ServiceList />
-      <Client/>
     </div>
   );
 };

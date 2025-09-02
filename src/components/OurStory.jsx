@@ -98,8 +98,8 @@ export default function OurStory() {
 
         {/* RIGHT SIDE: Text Content */}
         <div className="md:w-1/2 bottom-8 relative">
-          <CommonChipHeading chipTitle={"Our Story"} />
-          <h2 className="text-4xl md:text-5xl font-semibold  mb-12">
+          <CommonChipHeading chipTitle={"About Us"} />
+          <h2 className="text-4xl md:text-5xl font-semibold mt-6  mb-12">
             We love being your growth partner
           </h2>
           <p className="text-gray-300 mb-12 text-lg md:text-xl">
