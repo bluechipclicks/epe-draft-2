@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import Image from "next/image";
 import ContactModal from "./ContactModal";
+import CommonChipHeading from "./CommonChipHeading";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,11 +61,11 @@ const IndustryWeServe = () => {
       const lastCard = cards[cards.length - 1];
 
       cards.forEach((card, index) => {
-        const scaleValue = 1 - (cards.length - 1 - index) * 0.05;
+        const scaleValue = 0.8 - (cards.length - 1 - index) * 0.05;
 
         ScrollTrigger.create({
           trigger: card,
-          start: "top top",
+          start: "-40% top",
           pin: true,
           pinSpacing: false,
           scrub: true,
@@ -81,21 +82,35 @@ const IndustryWeServe = () => {
   }, []);
 
   return (
-    <section className=" bg-gray-100/80  py-12 md:py-20">
-      <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-center px-6 lg:px-8">
+    <section className=" bg-[#2D2D2D]  pt-12 md:pt-24">
+      {/* <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-center px-6 lg:px-8">
         Industries We Serve
       </h2>
       <p className=" max-w-7xl mx-auto text-black mb-8 md:mb-16 text-center px-6 lg:px-8">
         Your Trusted Partner for Comprehensive Boiler Engineering Solutions
-      </p>
+      </p> */}
+
       <section className="work-card  text-white px-6 lg:px-8">
         <div className="container max-w-7xl mx-auto ">
+          <div className="grid grid-cols-2 gap-12 mb-16">
+            <div>
+              <CommonChipHeading chipTitle={"Industries We Serve"} />
+              <p className="text-white mt-4 text-lg font-semibold">
+                Energy Process Equipments (EPE) offers innovative and reliable
+                solutions, including IBR Boilers and Heating Systems.
+              </p>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-semibold   text-white max-w-2xl leading-14">
+              Your Trusted Partner for Comprehensive Boiler Engineering
+              Solutions
+            </h2>
+          </div>
           <div className="cards">
             {products.map((product, index) => (
               <div
                 key={index}
                 ref={(el) => (cardsRef.current[index] = el)}
-                className="card-item mb-8 border border-gray-300/60 rounded-lg text-black bg-white  shadow-xl"
+                className="card-item mb-20  rounded-lg text-white bg-[#252525]  shadow-xl"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 ">
                   <div className="lg:col-span-5 flex flex-col justify-between p-6 md:p-20">
@@ -110,7 +125,7 @@ const IndustryWeServe = () => {
                     <div className="mt-4 md:mt-10">
                       <button
                         onClick={() => setIsModalOpen(true)}
-                        className="tag inline-block py-2 px-4 border hover:border-gray-300/60 bg-transparent border-[#DC2621] text-[#DC2621] hover:text-white rounded hover:bg-[#DC2621] transition-colors"
+                        className="tag inline-block py-2 px-4 border hover:border-gray-300/60 hover:bg-transparent border-[#DC2621]  text-white rounded bg-[#DC2621] transition-colors"
                       >
                         Know More
                       </button>

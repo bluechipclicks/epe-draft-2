@@ -1,19 +1,27 @@
 // components/AwardsSection.jsx
-import Image from 'next/image';
-import React from 'react';
+import Image from "next/image";
+import React from "react";
+import CommonChipHeading from "./CommonChipHeading";
 
-const AwardItem = ({ title, awardName, recipient, description, bgColor, hasGlow = false }) => {
+const AwardItem = ({
+  title,
+  awardName,
+  recipient,
+  description,
+  bgColor,
+  hasGlow = false,
+}) => {
   return (
     <div
       className={`relative p-8 py-16 overflow-hidden transition-all duration-300 ease-in-out 
         ${bgColor}
-        ${hasGlow ? 'group' : ''} // Add group class for hover effect
+        ${hasGlow ? "group" : ""} // Add group class for hover effect
       `}
     >
       {/* Hover Glow Effect */}
       <div
         className={`absolute bottom-0 right-0 w-11/12  h-full opacity-0 transition-opacity duration-500 ease-in-out
-          bg-gradient-to-b from-red-500 via-red-600 to-red-700 rounded-full filter blur-2xl z-0
+          bg-gradient-to-b from-white via-red-400 to-red-400 rounded-full filter blur-2xl z-0
           group-hover:opacity-40  transform translate-x-[45%]  translate-y-1/5 -rotate-45
         `}
       ></div>
@@ -23,11 +31,18 @@ const AwardItem = ({ title, awardName, recipient, description, bgColor, hasGlow 
           {title}
         </h3>
         <div className="flex gap-4 text-gray-400 md:w-2/3">
-          <div className="text-2xl mt-1 mr-3"><Image src="/assets/award.svg" alt='award' height={60} width={60}/></div> {/* Award icon */}
+          <div className="text-2xl mt-1 mr-3">
+            <Image src="/assets/award.svg" alt="award" height={60} width={60} />
+          </div>{" "}
+          {/* Award icon */}
           <div>
             <p className="text-2xl font-medium text-white">{awardName}</p>
             {/* {recipient && <p className="text-sm mt-6">{recipient}</p>} */}
-            {description && <p className="text-lg mt-6 text-gray-300 font-semibold">{description}</p>}
+            {description && (
+              <p className="text-lg mt-6 text-gray-300 font-semibold">
+                {description}
+              </p>
+            )}
           </div>
         </div>
       </div>
@@ -38,6 +53,23 @@ const AwardItem = ({ title, awardName, recipient, description, bgColor, hasGlow 
 const LeadingBoilerManufacturing = () => {
   return (
     <section className=" flex flex-col justify-center items-center">
+      <div className="px-8">
+        <div className="max-w-7xl mx-auto pt-24">
+          <div className="grid grid-cols-2 gap-12 mb-16">
+            <div>
+              <CommonChipHeading chipTitle={"Leading Boiler Manufacturing"} />
+              <p className="text-white mt-4 text-lg ">
+               Energy Process Equipments (EPE) has been designing and manufacturing boilers for over 15 years, thus developing a reputation for producing reliable and long-life products
+              </p>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-semibold   text-white max-w-2xl leading-14">
+              Your Trusted Partner for Comprehensive Boiler Engineering
+              Solutions
+            </h2>
+          </div>
+        </div>
+      </div>
+
       <div className=" w-full">
         <AwardItem
           title="Engineering Trust, Delivering Heat"
@@ -62,7 +94,6 @@ const LeadingBoilerManufacturing = () => {
           bgColor="bg-[#262626]"
           hasGlow={true}
         />
-           <div className='bg-[#202020] w-full py-12'/>
       </div>
     </section>
   );

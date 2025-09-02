@@ -61,7 +61,7 @@ export default function OurStory() {
   ];
 
   return (
-    <div className="bg-black text-white h-screen flex items-center justify-center px-8">
+    <div className=" text-white h-screen flex items-center justify-center px-8">
       <div className="flex flex-col md:flex-row w-full max-w-7xl  gap-12 ">
         {/* LEFT SIDE: Graph animation */}
         <div className="relative w-full md:w-1/2 h-[550px] flex items-end justify-around ">
@@ -99,7 +99,7 @@ export default function OurStory() {
         {/* RIGHT SIDE: Text Content */}
         <div className="md:w-1/2 bottom-8 relative">
           <CommonChipHeading chipTitle={"About Us"} />
-          <h2 className="text-4xl md:text-5xl font-semibold mt-6  mb-12">
+          <h2 className="text-4xl md:text-6xl font-medium mt-6  mb-12">
             We love being your growth partner
           </h2>
           <p className="text-gray-300 mb-12 text-lg md:text-xl">

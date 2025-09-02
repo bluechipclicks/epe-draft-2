@@ -17,7 +17,7 @@ export default function ProductCategoryCard({
       }`}
     >
       {/* Image Section (Now relative for overlay positioning) */}
-      <div className="relative bg-[#202020] dark:bg-[#e6f0e6] p-6 rounded-2xl flex justify-center items-center h-[550px] overflow-hidden">
+      <div className="relative bg-[#202020] dark:bg-[#e6f0e6] p-6 rounded-2xl flex justify-center items-center h-[650px] overflow-hidden">
         <Image
           src={imageSrc}
           alt={title}
