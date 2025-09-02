@@ -101,8 +101,7 @@ const IndustryWeServe = () => {
               </p>
             </div>
             <h2 className="text-4xl md:text-5xl font-semibold   text-white max-w-2xl leading-14">
-              Your Trusted Partner for Comprehensive Boiler Engineering
-              Solutions
+              Your Trusted Partner for Comprehensive Boiler 
             </h2>
           </div>
           <div className="cards">

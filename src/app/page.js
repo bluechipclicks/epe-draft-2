@@ -10,11 +10,13 @@ import IndustryWeServe from "@/components/IndustryWeServe";
 import StatsSection from "@/components/StatsSection";
 import InfiniteProductSlider from "@/components/InfiniteProductSlider";
 import TextAnimation from "@/components/TestAnimation";
+import AboutUs from "@/components/AboutUs";
 
 const page = () => {
   return (
     <div className="bg-[#2D2D2D]">
       <HeroSection />
+      {/* <AboutUs /> */}
       <OurStory />
       <ServiceAwards />
       <StatsSection />
