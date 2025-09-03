@@ -91,14 +91,14 @@ const StatsSection = () => {
   return (
     <section
       id="stats-section"
-      className="pb-12 md:pb-24 px-8  overflow-hidden bg-[#262626] "
+      className="pb-12 md:pb-20 px-8  overflow-hidden bg-[#262626] "
       style={{
         backgroundImage: `  linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(38, 38, 38, 1) 100%),url('/assets/product-category-bg.svg')`,
         backgroundRepeat: "repeat",
         backgroundSize: "auto",
       }}
     >
-      <div className="w-full mt-6 relative z-10 border-t border-t-gray-300 border-b border-b-gray-300">
+      <div className="w-full mt-6 relative z-10 ">
         <div className="flex items-center justify-around">
           {stats.map((stat, index) => {
             const IconComponent = stat.icon;

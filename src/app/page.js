@@ -21,8 +21,8 @@ const page = () => {
       <AboutUs />
       {/* <OurStory /> */}
       <ServiceAwards />
-      <ProductSlider />
-      {/* <IndustriesSection /> */}
+      {/* <ProductSlider /> */}
+      <IndustriesSection />
 
       <StatsSection />
 
