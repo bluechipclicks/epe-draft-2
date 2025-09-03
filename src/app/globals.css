@@ -60,3 +60,19 @@ h1 {
   z-index: 0;
   height: 100%;
 }
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide {
+  animation: slide 25s linear infinite;
+}
+
+.group:hover .animate-slide {
+  animation-play-state: paused;
+}

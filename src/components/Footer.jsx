@@ -8,7 +8,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#171717] px-6 lg:px-8 py-9 md:py-20 relative h-[90vh]">
+    <footer className="bg-[#171717] px-6 lg:px-8 py-9 md:py-20 relative h-screen">
       {/* Top Section */}
 
       <div className="">
@@ -21,7 +21,7 @@ const Footer = () => {
                 alt="epe"
                 height={500}
                 width={900}
-                className="absolute left-0 top-3 opacity-40"
+                className="absolute left-0 top-3 opacity-30"
               />
             </div>
             <div className="z-20">

@@ -24,7 +24,7 @@ const page = () => {
       <ProductSlider />
       <StatsSection />
 
-      {/* <InfiniteProductSlider /> */}
+      <InfiniteProductSlider />
 
       <IndustryWeServe />
       <ServiceList />
