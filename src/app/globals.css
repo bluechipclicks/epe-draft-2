@@ -154,7 +154,6 @@ h1 {
   text-stroke: 1px #fff;
   overflow: hidden;
   white-space: nowrap;
-  animation: fill-animation 3s infinite alternate; /* Applies the animation */
 }
 
 @keyframes fill-animation {

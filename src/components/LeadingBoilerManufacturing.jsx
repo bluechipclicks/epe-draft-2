@@ -57,14 +57,15 @@ const LeadingBoilerManufacturing = () => {
         <div className="max-w-7xl mx-auto pt-24">
           <div className="grid grid-cols-2 gap-12 mb-16">
             <div>
-              <CommonChipHeading chipTitle={"Leading Boiler Manufacturing"} />
+              <CommonChipHeading chipTitle={" Your Trusted Partner "} />
               <p className="text-white mt-4 text-lg ">
                Energy Process Equipments (EPE) has been designing and manufacturing boilers for over 15 years, thus developing a reputation for producing reliable and long-life products
               </p>
             </div>
             <h2 className="text-4xl md:text-5xl font-semibold   text-white max-w-2xl leading-14">
-              Your Trusted Partner for Comprehensive Boiler Engineering
-              Solutions
+            
+              Leading Boiler Manufacturing Company
+
             </h2>
           </div>
         </div>

@@ -104,7 +104,7 @@ const partnerLogos = [
     location: "Anand",
     imgSrc: "/assets/clients/logo 7.png",
   },
-    {
+  {
     company: " Larsen & Toubro Limited",
     location: "Allahabad Project",
     imgSrc: "/assets/clients/logo 1.png",
@@ -202,7 +202,7 @@ const partnerLogos = [
     location: "Anand",
     imgSrc: "/assets/clients/logo 7.png",
   },
-    {
+  {
     company: " Larsen & Toubro Limited",
     location: "Allahabad Project",
     imgSrc: "/assets/clients/logo 1.png",
@@ -338,7 +338,7 @@ const Client = () => {
             </p>
           </div>
           <h2 className="text-4xl md:text-5xl font-semibold  mb-12 text-white max-w-2xl leading-14">
-            Partnered with the Best Manufacturers Boilers
+            Partnered with the Best Boilers Manufacturers
           </h2>
         </div>
 
@@ -364,9 +364,13 @@ const Client = () => {
                     key={`${colIndex}-${logoIndex}`}
                     className="flex flex-col items-center  justify-center border border-[#464646] rounded-xl h-48 md:h-56 p-6 py-12"
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1, }}
-                    exit={{ opacity: 0, transition: { duration: 0.7 }, margin: "150px 0px 150px 0px" }}
-                    viewport={{ margin: "-10px 0px -10px 0px", amount: 0.3}}
+                    whileInView={{ opacity: 1 }}
+                    exit={{
+                      opacity: 0,
+                      transition: { duration: 0.7 },
+                      margin: "150px 0px 150px 0px",
+                    }}
+                    viewport={{ margin: "-10px 0px -10px 0px", amount: 0.3 }}
                   >
                     <div className=" p-4 rounded-lg">
                       <Image

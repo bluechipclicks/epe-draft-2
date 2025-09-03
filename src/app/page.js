@@ -12,6 +12,7 @@ import InfiniteProductSlider from "@/components/InfiniteProductSlider";
 import TextAnimation from "@/components/TestAnimation";
 import AboutUs from "@/components/AboutUs";
 import ProductSlider from "@/components/ProductSlider";
+import IndustriesSection from "@/components/IndustriesSection";
 
 const page = () => {
   return (
@@ -20,12 +21,12 @@ const page = () => {
       <AboutUs />
       {/* <OurStory /> */}
       <ServiceAwards />
-      {/* <ProductCategories /> */}
       <ProductSlider />
+      {/* <IndustriesSection /> */}
+
       <StatsSection />
 
       <InfiniteProductSlider />
-
       <IndustryWeServe />
       <ServiceList />
       <Client />

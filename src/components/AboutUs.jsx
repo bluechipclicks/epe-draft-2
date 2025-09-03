@@ -21,17 +21,20 @@ const AboutUs = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
             {/* Left Column */}
             <div className="lg:col-span-1">
-              <div className="about-item flex flex-col px-8 lg:px-12 justify-end h-full items-center lg:items-start">
+              <div className="about-item flex flex-col px-8 lg:px-12 justify-center h-full items-center lg:items-start">
                 <div className="about-details">
                   <div className="details-show">
                     <div className="about-details-info text-center lg:text-left">
-                      <h3 className="text-white text-2xl font-semibold mb-4">
+                      <h3 className="text-[#DC2621] text-4xl font-semibold mb-4">
                         Reliable Solutions
                       </h3>
-                      <p className="text-white text-base leading-relaxed">
-                        With over 15 years of expertise, EPE provides reliable
-                        boilers, ensuring durability, advancement, and
-                        customer-driven innovation.
+                      <p className="text-white text-lg leading-relaxed text-justify">
+                        With over 30 years of expertise, Energy Process
+                        Equipments (EPE) has built a strong reputation for
+                        delivering boilers that combine durability, performance,
+                        and innovation. Our solutions are designed to meet the
+                        diverse needs of industries, ensuring seamless
+                        operations and long-term reliability.
                       </p>
                     </div>
                   </div>
@@ -53,17 +56,20 @@ const AboutUs = () => {
 
             {/* Right Column */}
             <div className="lg:col-span-1">
-              <div className="about-item flex flex-col px-8 lg:px-12 justify-end h-full items-center lg:items-end">
+              <div className="about-item flex flex-col px-8 lg:px-12 justify-center h-full items-center lg:items-end">
                 <div className="about-details">
                   <div className="details-show">
                     <div className="about-details-info text-center lg:text-right">
-                      <h3 className="text-white text-2xl font-semibold mb-4">
+                      <h3 className="text-[#DC2621] text-4xl font-semibold mb-4">
                         Our Vision
                       </h3>
-                      <p className="text-white text-base leading-relaxed">
-                        To be respected as a high performance organization
-                        offering sustainable solutions in energy and
-                        environment.
+                      <p className="text-white text-lg leading-relaxed text-justify">
+                        At Energy Process Equipments (EPE), our guiding
+                        principle is to “NEVER COMPROMISE ON QUALITY & SAFETY.”
+                        We envision a future where industries operate with
+                        maximum efficiency, minimal downtime, and absolute
+                        safety standards. Every product we design reflects our
+                        commitment to engineering excellence and sustainability.
                       </p>
                     </div>
                   </div>
