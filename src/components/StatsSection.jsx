@@ -40,8 +40,8 @@ const StatsSection = () => {
           if (entry.isIntersecting && !hasAnimated.current) {
             hasAnimated.current = true; // Mark as animated
             // Start animations with a slight delay
-            setTimeout(() => animateCounter(15, "years"), 100);
-            setTimeout(() => animateCounter(844, "projects"), 300);
+            setTimeout(() => animateCounter(30, "years"), 100);
+            setTimeout(() => animateCounter(2500, "projects"), 300);
             setTimeout(() => animateCounter(36, "products"), 500);
             setTimeout(() => animateCounter(7, "certificate"), 700);
           }
@@ -72,7 +72,7 @@ const StatsSection = () => {
       icon: Award,
       number: counters.projects,
       suffix: "+",
-      label: "Projects Completed",
+      label: "Installations",
       description: "Successful Deliveries",
       gradient: "linear-gradient(to bottom right, #f97316, #ca8a04)", // orange-yellow
       delay: "0.2s",
@@ -98,8 +98,8 @@ const StatsSection = () => {
         backgroundSize: "auto",
       }}
     >
-      <div className="container max-w-7xl mx-auto relative z-10 border-t border-t-gray-300 border-b border-b-gray-300">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="w-full mt-6 relative z-10 border-t border-t-gray-300 border-b border-b-gray-300">
+        <div className="flex items-center justify-around">
           {stats.map((stat, index) => {
             const IconComponent = stat.icon;
             return (
@@ -122,7 +122,7 @@ const StatsSection = () => {
 
                   {/* Number + Labels */}
                   <div className="mb-4">
-                    <div className="text-4xl md:text-8xl font-semibold text-[#d9dee8] mb-1 transition-transform duration-300 group-hover:scale-105 tracking-wider">
+                    <div className="text-4xl md:text-[7vw] font-semibold text-[#d9dee8] mb-1 transition-transform duration-300 group-hover:scale-105 tracking-wider">
                       {stat.number}
                       {stat.suffix}
                     </div>
