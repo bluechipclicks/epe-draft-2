@@ -21,12 +21,12 @@ const page = () => {
       <AboutUs />
       {/* <OurStory /> */}
       <ServiceAwards />
+      <StatsSection />
       {/* <ProductSlider /> */}
       <IndustriesSection />
 
-      <StatsSection />
-
       <InfiniteProductSlider />
+
       <IndustryWeServe />
       <ServiceList />
       <Client />
