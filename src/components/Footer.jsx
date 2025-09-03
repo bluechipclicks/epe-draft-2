@@ -8,30 +8,34 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#171717] px-6 lg:px-8 py-9 md:py-20 relative h-screen">
+    <footer className="bg-[#171717] px-6 lg:px-8 py-9 md:py-24 relative">
       {/* Top Section */}
 
-      <div className="">
-        <div className="container max-w-7xl mx-auto  ">
-          <div className="grid gap-4 md:gap-12 sm:grid-cols-2">
+        <div className="">
+          <div className=" w-full flex justify-between items-center pb-20">
             {/* Column 1: Brand and Description */}
-            <div className="">
+            <div className="w-1/2 flex justify-center items-center">
               <Image
                 src="/assets/footer-bg.webp"
                 alt="epe"
-                height={500}
-                width={900}
-                className="absolute left-0 top-3 opacity-30"
+                height={400}
+                width={700}
+                className="   opacity-30"
               />
             </div>
-            <div className="z-20">
+            <div className="z-20 w-1/2">
               <div>
-                              <h2 className="text-5xl md:text-7xl text-white mb-6 leading-20">Let’s Talk Boiler Solutions</h2>
-                              <Link href={"#"} className="bg-gray-300/50 hover:bg-red-600 rounded-full font-bold text-white px-8 py-2 flex items-center gap-2 w-fit">Contact Us <GoArrowUpRight />
-</Link>
-
+                <h2 className="text-5xl md:text-7xl text-white mb-6 leading-20">
+                  Let’s Talk Boiler Solutions
+                </h2>
+                <Link
+                  href={"#"}
+                  className="bg-gray-300/50 hover:bg-red-600 rounded-full font-bold text-white px-8 py-2 flex items-center gap-2 w-fit"
+                >
+                  Contact Us <GoArrowUpRight />
+                </Link>
               </div>
-              
+
               <div className="grid grid-cols-2 z-20 my-9">
                 {/* Column 2: Product Links */}
                 <div className="mt-4">
@@ -97,7 +101,7 @@ const Footer = () => {
                         href="#"
                         className="text-lg text-white transition-colors"
                       >
-                      info@energy-boilers.com
+                        info@energy-boilers.com
                       </Link>
                     </li>
                     <li>
@@ -105,7 +109,7 @@ const Footer = () => {
                         href="#"
                         className="text-lg text-white transition-colors"
                       >
-                      +91 (265) 2830375
+                        +91 (265) 2830375
                       </Link>
                     </li>
                     <li>
@@ -113,10 +117,10 @@ const Footer = () => {
                         href="#"
                         className="text-lg text-white transition-colors"
                       >
-                        Plot No. 29, G.I.D.C. Industrial Estate, N.H. No.8, POR-Ramangamdi, Vadodara - 391243, Gujarat (India)
+                        Plot No. 29, G.I.D.C. Industrial Estate, N.H. No.8,
+                        POR-Ramangamdi, Vadodara - 391243, Gujarat (India)
                       </Link>
                     </li>
-                  
                   </ul>
                 </div>
                 {/* Column 3: Services Links */}
@@ -131,7 +135,6 @@ const Footer = () => {
             width={800}
           />
         </div>
-      </div>
     </footer>
   );
 };

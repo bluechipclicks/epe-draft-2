@@ -50,7 +50,7 @@ export default function TextAnimation() {
 
         {/* Right word */}
         <motion.h1
-          className="text-3xl md:text-[8vw] text-center font-bold  uppercase z-10 leading-tight"
+          className="text-3xl md:text-[8.3vw] text-center font-bold  uppercase z-10 leading-tight"
           initial={{ y: 150, opacity: 0 }}
           animate={startAnimation ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 1, ease: "backIn", delay: 0.2 }}
