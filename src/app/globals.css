@@ -135,3 +135,33 @@ h1 {
 .about-item:hover {
   transform: translateY(-5px);
 }
+
+.about-hover-fill-text {
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
+  color: transparent;
+  position: relative;
+}
+
+.about-hover-fill-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  color: #fff;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: fill-animation 3s infinite alternate; /* Applies the animation */
+}
+
+@keyframes fill-animation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
