@@ -18,7 +18,7 @@ const InfiniteProductSlider = () => {
     "Small Industrial Boiler ",
     "Thermic Fluid Heaters",
     "Hot Air Generators",
-     "IBR Boiler",
+    "IBR Boiler",
     "Small Industrial Boiler ",
     "Thermic Fluid Heaters",
     "Hot Air Generators",
@@ -32,10 +32,11 @@ const InfiniteProductSlider = () => {
             <div key={index} className="flex items-center gap-6">
               {/* Text */}
               <h2
-                className="text-3xl md:text-6xl font-bold 
-                           bg-gradient-red-glow bg-clip-text text-white 
-                           animate-shimmer bg-[length:200%_100%] 
-                           relative cursor-pointer whitespace-nowrap text-center"
+                className="
+                           text-center
+                           text-5xl md:text-8xl font-extrabold text-transparent hover-fill-text relative cursor-pointer whitespace-nowrap
+                           "
+                data-text={text}
               >
                 {text}
               </h2>

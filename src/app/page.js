@@ -17,8 +17,8 @@ const page = () => {
   return (
     <div className="bg-[#2D2D2D]">
       <HeroSection />
-      {/* <AboutUs /> */}
-      <OurStory />
+      <AboutUs />
+      {/* <OurStory /> */}
       <ServiceAwards />
       {/* <ProductCategories /> */}
       <ProductSlider />

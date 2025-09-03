@@ -1,49 +1,73 @@
-// app/page.tsx (Next.js 13+ App Router)
+import React from "react";
 import Image from "next/image";
 
-export default function AboutUs() {
+const AboutUs = () => {
   return (
-    <main className="flex h-screen w-full items-center justify-center bg-[#1a1a1d]">
-      {/* Container */}
-      <div className="relative flex w-[900px] h-[500px] bg-[#222225] rounded-2xl shadow-xl overflow-hidden">
-        
-        {/* Left Section */}
-        <div className="flex flex-col justify-center p-10 w-1/2 text-white space-y-6">
-          <h1 className="text-4xl font-bold leading-tight">
-            Blvck <br /> Tumbler
-          </h1>
-          <div>
-            <h2 className="text-sm uppercase tracking-widest opacity-70">Blvck Lifestyle Lovers</h2>
-            <p className="mt-2 text-sm opacity-60 max-w-xs">
-              A premium matte black tumbler designed for minimalists and lifestyle lovers.
-            </p>
+    <section className="about-sections bg-cover bg-no-repeat bg-center py-16 relative">
+      <div className="container mx-auto px-4">
+        <div className="about-wrapper relative">
+          <div className="about-title mb-8">
+            <h2 className="main-heading text-white uppercase leading-none text-[6vw] text-center mx-auto w-full mb-8">
+              About Energy Process Equipments
+            </h2>
           </div>
-          <div className="h-1 w-20 bg-orange-500 rounded"></div>
-        </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+            {/* Left Column */}
+            <div className="lg:col-span-1">
+              <div className="about-item flex flex-col px-8 lg:px-12 justify-end h-full items-center lg:items-start">
+                <div className="about-details">
+                  <div className="details-show">
+                    <div className="about-details-info text-center lg:text-left">
+                      <h3 className="text-white text-2xl font-semibold mb-4">
+                        Reliable Solutions
+                      </h3>
+                      <p className="text-white text-base leading-relaxed">
+                        With over 15 years of expertise, EPE provides reliable
+                        boilers, ensuring durability, advancement, and
+                        customer-driven innovation.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        {/* Center Product */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[25vw]">
-          <Image
-            src="/assets/products/sib.webp" // Replace with your image
-            alt="Blvck Tumbler"
-            width={200}
-            height={200}
-            className="drop-shadow-2xl  w-[25vw]"
-          />
-          {/* Orange Circle Accent */}
-          <div className="absolute top-10 -right-20 w-36 h-36 border-[8px] border-orange-500 rounded-full"></div>
-        </div>
+            {/* Center Column - Image */}
+            <div className="lg:col-span-1">
+              <div className="about-img h-full flex items-center justify-center">
+                <Image
+                  src="/assets/products/solid-fuel-fired-package-steam-boiler.webp"
+                  alt="solid-fuel-fired-package-steam-boiler"
+                  height={600}
+                  width={600}
+                />
+              </div>
+            </div>
 
-        {/* Right Section */}
-        <div className="flex flex-col justify-center items-end p-10 w-1/2 text-white">
-         
-          <div className="mt-8">
-            <button className="flex items-center gap-2 border border-gray-500 px-4 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">
-              Explore →
-            </button>
+            {/* Right Column */}
+            <div className="lg:col-span-1">
+              <div className="about-item flex flex-col px-8 lg:px-12 justify-end h-full items-center lg:items-end">
+                <div className="about-details">
+                  <div className="details-show">
+                    <div className="about-details-info text-center lg:text-right">
+                      <h3 className="text-white text-2xl font-semibold mb-4">
+                        Our Vision
+                      </h3>
+                      <p className="text-white text-base leading-relaxed">
+                        To be respected as a high performance organization
+                        offering sustainable solutions in energy and
+                        environment.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </main>
+    </section>
   );
-}
+};
+
+export default AboutUs;

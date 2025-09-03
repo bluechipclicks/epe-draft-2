@@ -76,3 +76,62 @@ h1 {
 .group:hover .animate-slide {
   animation-play-state: paused;
 }
+.hover-fill-text {
+  -webkit-text-stroke: 1px #fff; /* Outline */
+  text-stroke: 1px #fff;
+  color: transparent; /* keep text transparent initially */
+  position: relative;
+  transition: color 0.5s ease-in-out;
+}
+
+.hover-fill-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  color: #fff; /* white fill */
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
+  overflow: hidden;
+  transition: width 0.5s ease-in-out;
+  white-space: nowrap;
+}
+
+.hover-fill-text:hover::before {
+  width: 100%; /* reveals white fill */
+}
+.about-sections {
+  background-image: url('/assets/about-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Additional custom styles if needed */
+.main-heading {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Responsive adjustments for the main heading */
+@media (max-width: 768px) {
+  .about-sections .main-heading {
+    font-size: 12vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-sections .main-heading {
+    font-size: 15vw;
+  }
+}
+
+/* Optional: Custom animations or hover effects */
+.about-item {
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-item:hover {
+  transform: translateY(-5px);
+}
