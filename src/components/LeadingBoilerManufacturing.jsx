@@ -52,7 +52,7 @@ const AwardItem = ({
 
 const LeadingBoilerManufacturing = () => {
   return (
-    <section className=" flex flex-col justify-center items-center">
+    <section className=" flex flex-col justify-center items-center ">
       <div className="px-8">
         <div className="max-w-7xl mx-auto pt-24">
           <div className="grid grid-cols-2 gap-12 mb-16">

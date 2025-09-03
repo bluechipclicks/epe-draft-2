@@ -30,3 +30,33 @@ h1 {
   );
   background-size: 200% 100%;
 }
+.about-after-box {
+  position: relative;
+}
+
+.about-after-box::after {
+  content: '';
+  position: absolute;
+  top:0;
+  bottom: 6rem;  /* Tailwind bottom-24 */
+  left: -6rem;   /* Tailwind -left-24 */
+  right: 6.75rem;/* Tailwind right-11 */
+  background-color:  #2D2D2D; /* Tailwind bg-gray-50 */
+  z-index: 0;
+  height: 100%;
+}
+.about-right-after-box {
+  position: relative;
+  margin-left: auto;
+}
+.about-right-after-box::after {
+  content: '';
+  position: absolute;
+  top:0;
+  bottom: 6rem;  /* Tailwind bottom-24 */
+  right: 0rem;   /* Tailwind -left-24 */
+  left: 6.75rem;/* Tailwind right-11 */
+  background-color:  #2D2D2D; /* Tailwind bg-gray-50 */
+  z-index: 0;
+  height: 100%;
+}

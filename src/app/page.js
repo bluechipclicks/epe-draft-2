@@ -11,6 +11,7 @@ import StatsSection from "@/components/StatsSection";
 import InfiniteProductSlider from "@/components/InfiniteProductSlider";
 import TextAnimation from "@/components/TestAnimation";
 import AboutUs from "@/components/AboutUs";
+import ProductSlider from "@/components/ProductSlider";
 
 const page = () => {
   return (
@@ -19,9 +20,11 @@ const page = () => {
       {/* <AboutUs /> */}
       <OurStory />
       <ServiceAwards />
+      {/* <ProductCategories /> */}
+      <ProductSlider />
       <StatsSection />
-      <ProductCategories />
-      <InfiniteProductSlider />
+
+      {/* <InfiniteProductSlider /> */}
 
       <IndustryWeServe />
       <ServiceList />

@@ -1,139 +1,122 @@
-// components/BrandStory.js
 "use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
-import CommonChipHeading from "./CommonChipHeading";
-
-const horizontalLineVariants = {
-  hidden: { width: 0 },
-  visible: (i) => ({
-    width: "100%",
-    transition: {
-      duration: 1,
-      delay: i * 0.3, // staggered animation
-      ease: "easeInOut",
-    },
-  }),
-};
-const itemVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
+import { useState } from "react";
 
 export default function OurStory() {
-  const numberOfLines = 6;
-  const stats = [
-    {
-      value: "15+ ",
-      titleLine1: " Years Industry",
-      titleLine2: "Experience",
-      description:
-        "Delivering trusted boiler solutions since 1994, built on engineering excellence and long-term customer satisfaction.",
-    },
-    {
-      value: "840+",
-      titleLine1: "Satisfied",
-      titleLine2: "Clients",
-      description:
-        "Serving hundreds of clients with reliable, long-life thermal systems and efficient after-sales service.",
-    },
-    {
-      value: "7+",
-      titleLine1: "Sectors",
-      titleLine2: "Served",
-      description:
-        "Providing tailored boiler applications across key industries including food, textile, chemical, hospitality, and more.",
-    },
-    {
-      value: "24/7",
-      titleLine1: "Service",
-      titleLine2: "Support",
-      description:
-        "Round-the-clock technical support and maintenance services to ensure maximum uptime and client satisfaction.",
-    },
-  ];
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className=" text-white h-screen flex items-center justify-center px-8">
-      <div className="flex flex-col md:flex-row w-full max-w-7xl  gap-12 ">
-        {/* LEFT SIDE: Graph animation */}
-        <div className="relative w-full md:w-1/2 h-[550px] flex items-end justify-around ">
-          {/* Animated Horizontal Lines */}
-          {[...Array(numberOfLines)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute h-[1px] bg-gray-200/50" // Removed 'bottom-0'
-              custom={i}
-              initial="hidden"
-              animate="visible"
-              variants={horizontalLineVariants}
-              style={{
-                left: "0",
-                right: "0",
-                top: `${i * 25}%`, // Changed from 'bottom' to 'top'
-              }}
-            />
-          ))}
+    <div className="h-screen bg-gray-900 relative overflow-hidden">
+      {/* Grain texture overlay */}
+      <div className="absolute inset-0 opacity-30 mix-blend-overlay">
+        <div
+          className="w-full h-full"
+          // style={{
+          //   backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+          //   backgroundSize: '256px 256px'
+          // }}
+        />
+      </div>
 
-          {/* Optional Logo Card */}
-          <div className="absolute -top-5 left-5 transform ">
-            <div className="w-32 h-40 bg-white flex items-center justify-center rounded-2xl">
-              {/* Replace with actual icon/image if needed */}
-              <Image
-                src={"/assets/epe-icon.png"}
-                alt="epe-icon"
-                height={60}
-                width={60}
-              />
+      {/* Main container */}
+      <div className="relative flex min-h-screen">
+        {/* Left Panel */}
+        <div className="w-1/2 flex flex-col justify-center px-16 relative bg-[#202020]">
+          {/* Logo */}
+          <div className="absolute top-8 left-16">
+            <div className="text-white font-semibold  tracking-wider">EPE</div>
+          </div>
+
+          <div className="">
+            {/* Main Heading */}
+            <div>
+              <h2 className="text-4xl md:text-6xl font-semibold   text-white max-w-2xl leading-20">
+                Leading Boiler
+                <br /> Manufacturing
+              </h2>
+            </div>
+
+            {/* Description blocks */}
+
+            <div className="space-y-6 mt-36 relative ">
+              <div className="max-w-sm about-after-box ">
+                <div className="relative z-10 p-6 ">
+                  <h3 className="text-white text-2xl font-semibold mb-2">
+                    Reliable Solutions
+                  </h3>
+                  <p className="text-gray-300 text-justify text-md leading-relaxed">
+                    With over 15 years of expertise, EPE provides reliable
+                    boilers, ensuring durability, advancement, and
+                    customer-driven innovation.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* RIGHT SIDE: Text Content */}
-        <div className="md:w-1/2 bottom-8 relative">
-          <CommonChipHeading chipTitle={"About Us"} />
-          <h2 className="text-4xl md:text-6xl font-medium mt-6  mb-12">
-            We love being your growth partner
-          </h2>
-          <p className="text-gray-300 mb-12 text-lg md:text-xl">
-            Among boiler manufacturers and boiler maintenance companies, Energy
-            Process Equipments has established its name for innovation. Through
-            a commitment to research and development and a sound adaptable
-            strategy, today the company is involved into the creation of IBR,
-            Thermic Fluid Heating Systems, Hot Air Generators, DM Plants, IBR
-            Boiler Repairs among others.
-          </p>
+        {/* Center divider line */}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-400">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className="bg-gray-50/10 p-8 rounded-lg text-center shadow-md border-b border-b-white/40"
-              >
-                <p className="text-3xl md:text-4xl  font-bold text-white">
-                  {stat.value}
-                </p>
-                <h3 className="mt-3 text-lg font-bold text-white leading-tight">
-                  {stat.titleLine1}
-                  &nbsp;
-                  {stat.titleLine2}
-                </h3>
-                {/* <p className="mt-3 text-sm ">{stat.description}</p> */}
-              </motion.div>
-            ))}
-            {/* <p>
-              They created a new kind of affiliate agency that could meet the
-              rapidly evolving media and partnerships landscape.
-            </p> */}
+        {/* Right Panel */}
+        <div className="w-1/2 flex flex-col justify-center  relative bg-[#262626] ">
+          <div className="space-y-8">
+            {/* The Design section */}
+            <div className="max-w-sm">
+              <h2 className="text-4xl md:text-[6vw] leading-28 uppercase  text-[#202020] opacity-65 font-extrabold absolute top-9 -left-2">
+                Energy Process Equipments
+              </h2>
+            </div>
+
+            {/* UI Accent elements */}
+            <div className="space-y-6 mt-56 relative ">
+              <div className="max-w-sm about-right-after-box ">
+                <div className="relative z-10 p-6 ">
+                  <h3 className="text-white text-2xl font-semibold mb-2">
+                    Our Vision
+                  </h3>
+                  <p className="text-gray-300 text-justify text-md leading-relaxed">
+                    The guiding principle of Energy Process Equipments (EPE) is
+                    to "NEVER COMPROMISE ON QUALITY & SAFETY".
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
+
+          {/* Navigation arrow */}
+          <div className="absolute bottom-8 right-16">
+            <button
+              className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:border-orange-500 hover:text-orange-500 transition-colors duration-300"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <svg
+                className={`w-4 h-4 transform transition-transform duration-300 ${
+                  isHovered ? "translate-x-0.5" : ""
+                }`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Tumbler Image - Positioned on the center line */}
+        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+          <Image
+            src="/assets/products/solid-fuel-fired-package-steam-boiler.webp"
+            alt="solid-fuel-fired-package-steam-boiler"
+            height={600}
+            width={600}
+          />
         </div>
       </div>
     </div>

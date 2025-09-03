@@ -86,18 +86,16 @@ const StatsSection = () => {
       gradient: "linear-gradient(to bottom right, #3b82f6, #1d4ed8)", // blue
       delay: "0.4s",
     },
-   
   ];
 
   return (
     <section
       id="stats-section"
-      className="py-12 md:py-24 px-8  overflow-hidden bg-[#262626] "
-       style={{
-        backgroundImage: "url('/assets/product-category-bg.svg')",
+      className="pb-12 md:pb-24 px-8  overflow-hidden bg-[#262626] "
+      style={{
+        backgroundImage: `  linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(38, 38, 38, 1) 100%),url('/assets/product-category-bg.svg')`,
         backgroundRepeat: "repeat",
         backgroundSize: "auto",
-        
       }}
     >
       <div className="container max-w-7xl mx-auto relative z-10 border-t border-t-gray-300 border-b border-b-gray-300">
@@ -111,10 +109,7 @@ const StatsSection = () => {
                 style={{ animationDelay: stat.delay }}
               >
                 {/* Card */}
-                <div
-                  className="rounded-2xl  p-8 relative overflow-hidden  transition-all duration-500 "
-                 
-                >
+                <div className="rounded-2xl  p-8 relative overflow-hidden  transition-all duration-500 ">
                   {/* Icon */}
                   {/* <div
                     className="inline-flex items-center justify-center w-16 h-16 rounded-xl mb-6 transition-transform duration-300 group-hover:scale-110 bg-[#DC2621]"
